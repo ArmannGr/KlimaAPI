@@ -28,13 +28,7 @@ public class Wetter {
         this.time = time;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+    public Wetter(){}
 
     public String getCountry() {
         return country;

@@ -76,12 +76,13 @@ public class WetterDaoImpl implements WetterDao{
                     wetter.setTime(splitLine[0]);
                     //System.out.println(splitLine[1]);
                     wetter.setTemperature((splitLine[1]));
-                    wetterList.add(wetter);
-                    if (i == 10000){
+                    addWetter(wetter);
+                   // wetterList.add(wetter);
+                  /*  if (i == 10000){
                         addWetterList(wetterList);
                         wetterList.clear();
                         i = 0;
-                    }
+                    }*/
                 } catch (Exception e){
                     System.out.println("Fehler");
                 }
@@ -89,10 +90,10 @@ public class WetterDaoImpl implements WetterDao{
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            if (!wetterList.isEmpty()){
+            /*if (!wetterList.isEmpty()){
                 addWetterList(wetterList);
                 wetterList.clear();
-            }
+            }*/
             System.out.println(LocalDateTime.now());
             if (in != null)
                 try {

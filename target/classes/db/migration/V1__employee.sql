@@ -1,7 +1,7 @@
-CREATE table Employee(
+CREATE table Wetter(
                          id int auto_increment,
-                         first_name varchar(30),
-                         last_name varchar(30),
-                         email varchar(50),
+                         country varchar(60),
+                         temperature varchar(15),
+                         time varchar(80),
                          primary key(id)
 );

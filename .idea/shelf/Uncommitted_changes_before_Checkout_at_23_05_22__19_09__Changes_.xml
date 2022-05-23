@@ -1,0 +1,14 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_23_05_22,_19_09_[Changes]" date="1653325794506" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_05_22,_19_09_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 23.05.22, 19:09 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/example/klima/dao/WetterDaoImpl.class" />
+    <option name="AFTER_PATH" value="target/classes/com/example/klima/dao/WetterDaoImpl.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_05_22,_19_09_[Changes]/WetterDaoImpl.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/com/example/klima/controller/WetterController.class" />
+    <option name="AFTER_PATH" value="target/classes/com/example/klima/controller/WetterController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_05_22,_19_09_[Changes]/WetterController.class" />
+  </binary>
+</changelist>

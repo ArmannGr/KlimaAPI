@@ -5,10 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.validation.constraints.NotBlank;
 
 public class Wetter {
-
-    @JsonProperty("id")
-    private int id;
-
     @NotBlank
     @JsonProperty("country")
     private String country;
@@ -20,13 +16,6 @@ public class Wetter {
     @NotBlank
     @JsonProperty("time")
     private String time;
-
-    public Wetter(int id, String country, String temperature, String time){
-        this.id = id;
-        this.country = country;
-        this.temperature = temperature;
-        this.time = time;
-    }
 
     public Wetter(){}
 

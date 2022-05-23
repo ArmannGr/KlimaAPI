@@ -100,7 +100,7 @@ public class WetterDaoImpl implements WetterDao{
                     wetter.setTemperature((splitLine[1]));
                    // addWetter(wetter);
                     wetterList.add(wetter);
-                    if (i == 10000){
+                    if (i == 100000){
                         addWetterList(wetterList);
                         wetterList.clear();
                         i = 0;

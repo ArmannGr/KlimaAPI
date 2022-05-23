@@ -100,7 +100,7 @@ public class WetterDaoImpl implements WetterDao{
                     wetter.setTemperature((splitLine[1]));
                    // addWetter(wetter);
                     wetterList.add(wetter);
-                    if (i == 100000){
+                    if (i == 50000){
                         addWetterList(wetterList);
                         wetterList.clear();
                         i = 0;
@@ -112,10 +112,10 @@ public class WetterDaoImpl implements WetterDao{
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            /*if (!wetterList.isEmpty()){
+            if (!wetterList.isEmpty()){
                 addWetterList(wetterList);
                 wetterList.clear();
-            }*/
+            }
             System.out.println(LocalDateTime.now());
             if (in != null)
                 try {
@@ -127,7 +127,7 @@ public class WetterDaoImpl implements WetterDao{
 
     public void readWetterFile1(String folder, String filename){
         String sql = """
-           INSERT into Wetter(country,temperature,time)
+           INSERT into Wetter2(country,temperature,time)
            VALUES (?,?,?);
            """;
         System.out.println(filename);

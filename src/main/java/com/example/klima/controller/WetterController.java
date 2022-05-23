@@ -24,7 +24,7 @@ public class WetterController {
 
     @GetMapping("/importToDB")
     public String importToDB(){
-        String folder = "/Users/mauritz_langer/Documents/Test";
+        String folder = "C:/Users/robin/OneDrive/Desktop/test5";
        wetterDao.readWetterFolder(folder);
         return "Success";
     }

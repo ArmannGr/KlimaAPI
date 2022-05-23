@@ -37,7 +37,7 @@ public class WetterDaoImpl implements WetterDao{
 
     public List<Wetter> addWetterList(List<Wetter> wetterList){
         String sql = """
-           INSERT into Wetter(country,temperature,time)
+           INSERT into Wetter2(country,temperature,time)
            VALUES (?,?,?);
            """;
         jdbcTemplate.batchUpdate(sql, new BatchPreparedStatementSetter() {

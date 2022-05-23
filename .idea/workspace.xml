@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91875094-299e-492d-a252-b81f61e2fd2a" name="Changes" comment="Wetter Daten sollen eingelesen werden">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/klima/controller/WetterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/klima/controller/WetterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/klima/dao/WetterDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/klima/dao/WetterDaoImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +87,7 @@
       <workItem from="1652811938286" duration="317000" />
       <workItem from="1652884903477" duration="1333000" />
       <workItem from="1653147174547" duration="10803000" />
+      <workItem from="1653322086804" duration="348000" />
     </task>
     <task id="LOCAL-00001" summary="erster commit">
       <created>1652811997341</created>
@@ -122,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653236999962</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Wetter Daten sollen eingelesen werden">
+      <created>1653322260499</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1653322260499</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

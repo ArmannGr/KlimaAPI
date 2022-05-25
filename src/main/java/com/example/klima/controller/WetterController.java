@@ -24,7 +24,7 @@ public class WetterController {
         return "Success";
     }
 
-    @GetMapping("/importToDB")
+    @GetMapping("/importToDBWorldEmissionUsage")
     public String importToDBWorldEmissionUsage(){
         String folder = "C:/Users/robin/OneDrive/Desktop/test5";
         worldEmissionUsageDao.readWorldEmissionUsageFolder(folder);

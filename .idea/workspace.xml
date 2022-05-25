@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91875094-299e-492d-a252-b81f61e2fd2a" name="Changes" comment="WorldEmissionUsage Implementierung">
+    <list default="true" id="91875094-299e-492d-a252-b81f61e2fd2a" name="Changes" comment="Code Cleaning">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_05_22__19_09__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23_05_22__19_09__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/klima/controller/WetterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/klima/controller/WetterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/klima/dao/WorldEmissionUsageDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/klima/dao/WorldEmissionUsageDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/klima/controller/WetterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/klima/controller/WetterController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="uebertrag" />
+        <entry key="$PROJECT_DIR$" value="uebertragClean" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,23 +47,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="mariadb" />
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75"
+  }
+}]]></component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="KlimaApplication" />

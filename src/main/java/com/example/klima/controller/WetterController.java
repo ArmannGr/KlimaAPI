@@ -24,11 +24,14 @@ public class WetterController {
         return "Success";
     }
 
+
+
     @GetMapping("/importToDBWorldEmissionUsage")
     public String importToDBWorldEmissionUsage(){
-        String folder = "C:/Users/robin/OneDrive/Desktop/test5";
+        String folder = "C:/Users/alexa/Desktop/DATA_PROJECT";
         worldEmissionUsageDao.readWorldEmissionUsageFolder(folder);
         return "Success";
     }
 
 }
+

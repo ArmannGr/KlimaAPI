@@ -26,39 +26,18 @@ public class WorldEmissionUsageDaoImpl implements WorldEmissionUsageDao{
         this.jdbcTemplate = jdbcTemplate;
     }
 
-    public void addWorldEmissionUsageList(List<WorldEmissionUsage> worldEmissionUsageList){
+    public int  addWorldEmissionUsage(WorldEmissionUsage worldEmissionUsage) {
         String sql = """
            INSERT into world_emission_usage(year,fossil_fuel_land_usage_emissions,land_use_emissions,fossil_fuel_and_industry_emissions)
            VALUES (?,?,?,?);
            """;
-        jdbcTemplate.batchUpdate(sql, new BatchPreparedStatementSetter() {
-            @Override
-            public void setValues(PreparedStatement ps, int i) throws SQLException {
-                WorldEmissionUsage worldEmissionUsage = worldEmissionUsageList.get(i);
-                ps.setString(1, worldEmissionUsage.getYear());
-                ps.setString(2, worldEmissionUsage.getLandUseEmissions());
-                ps.setString(3, worldEmissionUsage.getFossilFuelLandUsageEmissions());
-                ps.setString(4, worldEmissionUsage.getFossilFuelAndIndustryEmissions());
-            }
 
-            @Override
-            public int getBatchSize() {
-                return worldEmissionUsageList.size();
-            }
-        });
-    }
+        return jdbcTemplate.update(sql,worldEmissionUsage.getYear(),worldEmissionUsage.getFossilFuelLandUsageEmissions(),worldEmissionUsage.getLandUseEmissions(), worldEmissionUsage.getFossilFuelAndIndustryEmissions());
+
+      }
 
     @Override
-    public void readWorldEmissionUsageFolder(String foldername){
-        File folder = new File(foldername);
-        for (File file: Objects.requireNonNull(folder.listFiles())){
-            if (!file.isDirectory() && file.getName().endsWith(".csv")) {
-                readWorldEmissionUsageFile(foldername, file.getName());
-            }
-        }
-    }
-
-    public void readWorldEmissionUsageFile(String folder, String filename){
+    public int readWorldEmissionUsageFile(String folder, String filename){
         System.out.println(filename);
         System.out.println(LocalDateTime.now());
         File file = new File(folder + "/" + filename);
@@ -82,19 +61,15 @@ public class WorldEmissionUsageDaoImpl implements WorldEmissionUsageDao{
             while ((row = in.readLine()) != null) {
                 try {
                     i++;
-                    String[] splitLine = row.split(",");
+                    String[] splitLine = row.split(";");
                     WorldEmissionUsage worldEmissionUsage = new WorldEmissionUsage();
-                    worldEmissionUsage.setYear(filenameWithoutEnding[1]);
+                    worldEmissionUsage.setYear(splitLine[1]);
                     worldEmissionUsage.setFossilFuelLandUsageEmissions(splitLine[2]);
-                    System.out.println(splitLine[2]);
-                    worldEmissionUsage.setLandUseEmissions((splitLine[3]));
-                    worldEmissionUsage.setFossilFuelAndIndustryEmissions((splitLine[3]));
-                    WorldEmissionUsageList.add(worldEmissionUsage);
-                    if (i == 5000){
-                        addWorldEmissionUsageList(WorldEmissionUsageList);
-                        WorldEmissionUsageList.clear();
-                        i = 0;
-                    }
+
+                    worldEmissionUsage.setLandUseEmissions(splitLine[3]);
+                    worldEmissionUsage.setFossilFuelAndIndustryEmissions(splitLine[4]);
+                    addWorldEmissionUsage(worldEmissionUsage);
+
                 } catch (Exception e){
                     System.out.println("Fehler");
                 }
@@ -102,16 +77,15 @@ public class WorldEmissionUsageDaoImpl implements WorldEmissionUsageDao{
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            if (!WorldEmissionUsageList.isEmpty()){
-                addWorldEmissionUsageList(WorldEmissionUsageList);
-                WorldEmissionUsageList.clear();
-            }
-            System.out.println(LocalDateTime.now());
+
+            System.out.println(LocalDateTime.now
+                    ());
             if (in != null)
                 try {
                     in.close();
                 } catch (IOException ignored) {
                 }
         }
+        return 0;
     }
 }

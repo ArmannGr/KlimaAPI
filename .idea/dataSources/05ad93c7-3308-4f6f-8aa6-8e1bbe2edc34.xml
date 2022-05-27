@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="climaApi@langerm.ddnss.de">
-  <database-model serializer="dbm" dbms="MARIADB" family-id="MARIADB" format-version="4.32">
+  <database-model serializer="dbm" dbms="MARIADB" family-id="MARIADB" format-version="4.39">
     <root id="1">
       <DefaultCasing>exact</DefaultCasing>
       <DefaultEngine>InnoDB</DefaultEngine>
@@ -1088,10 +1088,10 @@ climaApi|schema||wetterDashboard||UPDATE|G</Grants>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
     <column id="339" parent="327" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="340" parent="327" name="first_name">
       <DataType>varchar(30)|0s</DataType>
@@ -1111,10 +1111,10 @@ climaApi|schema||wetterDashboard||UPDATE|G</Grants>
       <Primary>1</Primary>
     </key>
     <column id="344" parent="328" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="345" parent="328" name="country">
       <DataType>varchar(60)|0s</DataType>
@@ -1134,10 +1134,10 @@ climaApi|schema||wetterDashboard||UPDATE|G</Grants>
       <Primary>1</Primary>
     </key>
     <column id="349" parent="329" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="350" parent="329" name="country">
       <DataType>varchar(60)|0s</DataType>
@@ -1229,10 +1229,10 @@ climaApi|schema||wetterDashboard||UPDATE|G</Grants>
       <Primary>1</Primary>
     </key>
     <column id="369" parent="333" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
     <column id="370" parent="333" name="first_name">
       <DataType>varchar(30)|0s</DataType>

@@ -28,8 +28,8 @@ public class WorldEmissionUsageDaoImpl implements WorldEmissionUsageDao{
 
     public void addWorldEmissionUsageList(List<WorldEmissionUsage> worldEmissionUsageList){
         String sql = """
-           INSERT into WorldEmissionUsage(year,fossil_fuel_land_usage_emissions,land_use_emissions,fossil_fuel_and_industry_emissions)
-           VALUES (?,?,?);
+           INSERT into world_emission_usage(year,fossil_fuel_land_usage_emissions,land_use_emissions,fossil_fuel_and_industry_emissions)
+           VALUES (?,?,?,?);
            """;
         jdbcTemplate.batchUpdate(sql, new BatchPreparedStatementSetter() {
             @Override
@@ -90,7 +90,7 @@ public class WorldEmissionUsageDaoImpl implements WorldEmissionUsageDao{
                     worldEmissionUsage.setLandUseEmissions((splitLine[3]));
                     worldEmissionUsage.setFossilFuelAndIndustryEmissions((splitLine[3]));
                     WorldEmissionUsageList.add(worldEmissionUsage);
-                    if (i == 50000){
+                    if (i == 5000){
                         addWorldEmissionUsageList(WorldEmissionUsageList);
                         WorldEmissionUsageList.clear();
                         i = 0;

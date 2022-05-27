@@ -29,9 +29,21 @@ public class WetterController {
     @GetMapping("/importToDBWorldEmissionUsage")
     public String importToDBWorldEmissionUsage(){
         String folder = "C:/Users/alexa/Desktop/DATA_PROJECT";
-        worldEmissionUsageDao.readWorldEmissionUsageFolder(folder);
+
+        worldEmissionUsageDao.readWorldEmissionUsageFile("C:/Users/alexa/Desktop/DATA_PROJECT", "ANNUAL.csv" +
+                "");
         return "Success";
     }
+
+    @GetMapping("/importToDBWaterAgriculture")
+    public String importToDBWaterAgriculture(){
+        String folder = "C:/Users/alexa/Desktop/DATA_PROJECT";
+
+        worldEmissionUsageDao.readWorldEmissionUsageFile("C:/Users/alexa/Desktop/DATA_PROJECT", "ANNUAL2.csv" +
+                "");
+        return "Success";
+    }
+
 
 }
 

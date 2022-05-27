@@ -1,5 +1,5 @@
 package com.example.klima.dao;
 
 public interface CountryEmissionDao {
-    void readCountryEmissionFolder(String foldername);
+    void readCountryEmissionFile(String folder, String filename);
 }
